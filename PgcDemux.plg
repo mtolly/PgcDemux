@@ -1,0 +1,60 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PgcDemux - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0xc0a /fo"Release/PgcDemux.res" /d "NDEBUG" "E:\visualC\GUIs\PgcDemux_1204\PgcDemux.rc"" 
+Creating temporary file "C:\DOCUME~1\jsoto\CONFIG~1\Temp\RSP554.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/PgcDemux.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\visualC\GUIs\PgcDemux_1204\CustomVob.cpp"
+"E:\visualC\GUIs\PgcDemux_1204\PgcDemux.cpp"
+"E:\visualC\GUIs\PgcDemux_1204\PgcDemuxDlg.cpp"
+"E:\visualC\GUIs\PgcDemux_1204\ToolTipDialog.cpp"
+"E:\visualC\GUIs\PgcDemux_1204\util.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jsoto\CONFIG~1\Temp\RSP554.tmp" 
+Creating temporary file "C:\DOCUME~1\jsoto\CONFIG~1\Temp\RSP555.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/PgcDemux.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\visualC\GUIs\PgcDemux_1204\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jsoto\CONFIG~1\Temp\RSP555.tmp" 
+Creating temporary file "C:\DOCUME~1\jsoto\CONFIG~1\Temp\RSP556.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/PgcDemux.pdb" /machine:I386 /out:"Release/PgcDemux.exe" 
+.\Release\CustomVob.obj
+.\Release\PgcDemux.obj
+.\Release\PgcDemuxDlg.obj
+.\Release\StdAfx.obj
+.\Release\ToolTipDialog.obj
+.\Release\util.obj
+.\Release\PgcDemux.res
+]
+Creating command line "link.exe @C:\DOCUME~1\jsoto\CONFIG~1\Temp\RSP556.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CustomVob.cpp
+PgcDemux.cpp
+PgcDemuxDlg.cpp
+ToolTipDialog.cpp
+util.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Release/PgcDemux.bsc"  .\Release\StdAfx.sbr .\Release\CustomVob.sbr .\Release\PgcDemux.sbr .\Release\PgcDemuxDlg.sbr .\Release\ToolTipDialog.sbr .\Release\util.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+PgcDemux.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,5 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by PgcDemux.rc
+//
+#define HIDC_COMBOANG                   0x806603f4    // IDD_PGCDEMUX_DIALOG [English (U.S.)]
+#define HIDC_STATICANG                  0x806603f5    // IDD_PGCDEMUX_DIALOG [English (U.S.)]

@@ -1,0 +1,307 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About PgcDemux"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "PgcDemux Version 1.2.0.1",IDC_STATICVER,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "This SW is freeware & open source under GPL license",
+                    IDC_STATIC,40,40,180,8,SS_NOPREFIX
+END
+
+IDD_PGCDEMUX_DIALOG DIALOGEX 0, 0, 247, 226
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PgcDemux v1.2.0.1"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Input IFO",IDC_STATIC,5,0,235,30,WS_GROUP
+    EDITTEXT        IDC_EDITINPUT,10,10,190,15,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Browse",IDC_BUTTONINPUT,205,10,30,15
+    GROUPBOX        "Output Folder",IDC_STATIC,5,30,235,30
+    EDITTEXT        IDC_EDITOUTPUT,10,40,190,15,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Browse",IDC_BUTTONOUTPUT,205,40,30,15
+    GROUPBOX        "Mode",IDC_STATIC,5,60,235,30,WS_GROUP
+    CONTROL         "by PGC",IDC_RADIOPGC,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,20,75,40,10
+    CONTROL         "by VOB id",IDC_RADIOVOB,"Button",BS_AUTORADIOBUTTON,95,
+                    75,47,10
+    CONTROL         "Single Cell",IDC_RADIOCELL,"Button",BS_AUTORADIOBUTTON,
+                    165,75,49,10
+    GROUPBOX        "Options",IDC_STATIC,5,90,110,105,WS_GROUP
+    CONTROL         "Demux video stream",IDC_CHECKVID,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,15,100,80,10
+    CONTROL         "Demux all audio streams",IDC_CHECKAUD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,110,92,10
+    CONTROL         "Demux all subpic streams",IDC_CHECKSUB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,120,95,10
+    CONTROL         "Create CellTimes.txt",IDC_CHECKCELLT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,130,78,10
+    CONTROL         "Create Logfile",IDC_CHECKLOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,150,59,10
+    CONTROL         "Create a PGC VOB",IDC_CHECKVOB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,160,76,10
+    CONTROL         "One file per VID",IDC_CHECKVOB2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,170,66,10
+    GROUPBOX        "PGC Selection",IDC_STATICSEL,120,90,120,105,WS_GROUP
+    GROUPBOX        "Domain",IDC_STATIC,125,100,110,30
+    CONTROL         "Menus",IDC_RADIOM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,130,115,37,10
+    CONTROL         "Titles",IDC_RADIOT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,185,115,33,10
+    COMBOBOX        IDC_COMBOPGC,125,140,110,120,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    RTEXT           "Cells",IDC_STATICCELL,125,161,20,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDITCELL,150,161,20,12,ES_READONLY | ES_NUMBER
+    LTEXT           "Angle",IDC_STATICANG,185,161,20,15,SS_CENTERIMAGE,0,
+                    HIDC_STATICANG
+    COMBOBOX        IDC_COMBOANG,210,161,25,40,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_COMBOANG
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,5,
+                    200,235,5
+    DEFPUSHBUTTON   "Process!",IDOK,30,210,35,14,WS_GROUP
+    DEFPUSHBUTTON   "Abort",IDABORT,105,210,35,14
+    PUSHBUTTON      "Quit",IDCANCEL2,180,210,35,14
+    PUSHBUTTON      "Customize file >>",IDC_BUTTONCUSTOM,25,180,70,10
+    PUSHBUTTON      "Check A/V delay",IDC_BUTTONDELAY,145,180,70,10
+    CONTROL         "Include end time",IDC_CHECKENDTIME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,140,68,10
+END
+
+IDD_CUSTOMVOB DIALOG DISCARDABLE  0, 0, 182, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VOB File Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDOK,120,35,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,120,55,50,14
+    DEFPUSHBUTTON   "Defaults",IDDEFAULT,120,15,50,14
+    CONTROL         "Write Video Packs",IDC_CHECKVIDEOPACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,30,75,10
+    CONTROL         "Only First I Frame",IDC_CHECKIFRAME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,30,40,70,10
+    CONTROL         "Write Audio Packs",IDC_CHECKAUDIOPACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,56,75,10
+    CONTROL         "Write Nav Packs",IDC_CHECKNAVPACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,20,70,10
+    CONTROL         "Write Subpicture Packs",IDC_CHECKSUBPACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,65,91,10
+    CONTROL         "Patch LBA Number",IDC_CHECKLBA,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,10,77,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,4
+ PRODUCTVERSION 1,2,0,4
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "PgcDemux MFC Application\0"
+            VALUE "FileVersion", "1, 2, 0, 4\0"
+            VALUE "InternalName", "PgcDemux\0"
+            VALUE "LegalCopyright", "Copyright (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "PgcDemux.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "PgcDemux Application\0"
+            VALUE "ProductVersion", "1, 2, 0, 4\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PGCDEMUX_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_CUSTOMVOB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About PgcDemux..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Modern) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PgcDemux.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\PgcDemux.ico"
+#endif    // Spanish (Modern) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\PgcDemux.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
